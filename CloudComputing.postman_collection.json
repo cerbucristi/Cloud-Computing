@@ -1,0 +1,417 @@
+{
+	"info": {
+		"_postman_id": "19b27ea6-dea5-4b75-8c63-eae3dc6102de",
+		"name": "CloudComputing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25352635",
+		"_collection_link": "https://planetary-shadow-308928.postman.co/workspace/cristi~976ec62d-f614-407b-a937-7a3214efdf3e/collection/25352635-19b27ea6-dea5-4b75-8c63-eae3dc6102de?action=share&creator=25352635&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"1cerbucristimadalin@gmail.com\",\r\n  \"name\": \"Cerbu Cristi\",\r\n  \"password\": \"cristi123\",\r\n  \"phoneNumber\": \"123-456-7890\",\r\n  \"city\": \"New York\",\r\n  \"role\": \"user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"1cerbucristimadalin@gmail.com\",\r\n    \"password\": \"cristi123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert flower rose",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjZXJidWNyaXN0aW1kYWxpbkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDA3MDI0OCwiZXhwIjoxNzEwMDczODQ4fQ.Ey2Ajtyt-N__2Z4oC9H6tBHmzVYQ85QO4mZA5RfPlYoQyrZntlUeaFAj9hXlsvxsWjbxonq-0dzV7abLrQaqBw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Rose\",\r\n  \"kind\": \"Floribunda\",\r\n  \"plantingDate\": \"2024-03-01\",\r\n  \"ownerEmail\": \"cerbucristimdalin@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/flowers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"flowers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert flower tulip",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjZXJidWNyaXN0aW1kYWxpbkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDA3MzQwNSwiZXhwIjoxNzEwMDc3MDA1fQ.Fw3hfbW-zdy3HHvjNnS3HUKz7lk6UQ-M5Z4zxPy1ZFLN1T2JXrr7zgdthO2I2nS53WEQ9H3fnjzfZc_ygrGx0A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"tulip\",\r\n  \"kind\": \"holland\",\r\n  \"plantingDate\": \"2024-03-02\",\r\n  \"ownerEmail\": \"cerbucristimdalin@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/flowers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"flowers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get flower",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjZXJidWNyaXN0aW1kYWxpbkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDA2ODk2NSwiZXhwIjoxNzEwMDcyNTY1fQ.AiOC7fY98f4ZPTP6U7YJHo2BA2GVCSaGEfTl9xYwRY0ozWhAWKCNJNcCWp9nvQKLZcwZ4qapr6pjojSAB36jjg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/flowers/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"flowers",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all flowers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjZXJidWNyaXN0aW1kYWxpbkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDA3NDA0MSwiZXhwIjoxNzEwMDc3NjQxfQ.jIkH3U1Uzg56bb1yo07HtStu5Esud-gzElJ0Wf3Y1uDOlP62n9KV3fVr1DfTy6AAul8yCrqIvEYxnlGgtXIkLw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/flowers/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"flowers",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxY2VyYnVjcmlzdGltYWRhbGluQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzEwMDc0ODMxLCJleHAiOjE3MTAwNzg0MzF9.d-PM9QUeQAGQlm26feaHfW7Al0Bfin2RJDCGFtwz7PTG0pfEtFGRhv0eZv1G7sbwSwPK8ihEAS50oZXebU4YEQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"1cerbucristimadalin@gmail.com\",\r\n  \"name\": \"Cerbu Update\",\r\n  \"phoneNumber\": \"123-456-0000\",\r\n  \"passwordHash\" : \"cristi123\",\r\n  \"city\": \"New York\",\r\n  \"role\": \"grower\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "uppdate flower",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjZXJidWNyaXN0aW1kYWxpbkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDA3NDA0MSwiZXhwIjoxNzEwMDc3NjQxfQ.jIkH3U1Uzg56bb1yo07HtStu5Esud-gzElJ0Wf3Y1uDOlP62n9KV3fVr1DfTy6AAul8yCrqIvEYxnlGgtXIkLw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 9,\r\n    \"name\": \"testFlowerUpdated\",\r\n    \"kind\": \"updatedKind\",\r\n    \"plantingDate\": \"11-09-2021\",\r\n    \"ownerEmail\": \"cerbucristimdalin@gmail.com\",\r\n    \"status\": \"selled\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/flowers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"flowers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxY2VyYnVjcmlzdGltYWRhbGluQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzEwMDc0ODMxLCJleHAiOjE3MTAwNzg0MzF9.d-PM9QUeQAGQlm26feaHfW7Al0Bfin2RJDCGFtwz7PTG0pfEtFGRhv0eZv1G7sbwSwPK8ihEAS50oZXebU4YEQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete flower",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxY2VyYnVjcmlzdGltYWRhbGluQGdtYWlsLmNvbSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzEwMDc0ODMxLCJleHAiOjE3MTAwNzg0MzF9.d-PM9QUeQAGQlm26feaHfW7Al0Bfin2RJDCGFtwz7PTG0pfEtFGRhv0eZv1G7sbwSwPK8ihEAS50oZXebU4YEQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/flowers/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"flowers",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "uppdate flower",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjZXJidWNyaXN0aW1kYWxpbkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDA3NDA0MSwiZXhwIjoxNzEwMDc3NjQxfQ.jIkH3U1Uzg56bb1yo07HtStu5Esud-gzElJ0Wf3Y1uDOlP62n9KV3fVr1DfTy6AAul8yCrqIvEYxnlGgtXIkLw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 9,\r\n    \"name\": \"testFlowerUpdated\",\r\n    \"kind\": \"updatedKind\",\r\n    \"plantingDate\": \"11-09-2021\",\r\n    \"ownerEmail\": \"cerbucristimdalin@gmail.com\",\r\n    \"status\": \"selled\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/flowers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"flowers"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjZXJidWNyaXN0aW1kYWxpbkBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTcxMDA3MzQwNSwiZXhwIjoxNzEwMDc3MDA1fQ.Fw3hfbW-zdy3HHvjNnS3HUKz7lk6UQ-M5Z4zxPy1ZFLN1T2JXrr7zgdthO2I2nS53WEQ9H3fnjzfZc_ygrGx0A",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
